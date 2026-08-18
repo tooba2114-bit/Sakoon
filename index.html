@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sukoon - A Moment of Peace</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HOME SCREEN -->
+        <section id="homeScreen" class="screen">
+
+            <div class="logo">☾</div>
+
+            <h1>Sukoon</h1>
+
+            <p class="tagline">
+                Find peace, one verse at a time.
+            </p>
+
+            <p class="intro">
+                How are you feeling today?
+            </p>
+
+            <div class="mood-grid">
+
+                <button class="mood-btn" data-mood="sad">
+                    <span>😔</span>
+                    <small>Sad</small>
+                </button>
+
+                <button class="mood-btn" data-mood="worried">
+                    <span>😟</span>
+                    <small>Worried</small>
+                </button>
+
+                <button class="mood-btn" data-mood="lonely">
+                    <span>🥺</span>
+                    <small>Lonely</small>
+                </button>
+
+                <button class="mood-btn" data-mood="angry">
+                    <span>😤</span>
+                    <small>Angry</small>
+                </button>
+
+                <button class="mood-btn" data-mood="tired">
+                    <span>😴</span>
+                    <small>Tired</small>
+                </button>
+
+                <button class="mood-btn" data-mood="confused">
+                    <span>😐</span>
+                    <small>Confused</small>
+                </button>
+
+                <button class="mood-btn" data-mood="happy">
+                    <span>😊</span>
+                    <small>Happy</small>
+                </button>
+
+                <button class="mood-btn" data-mood="grateful">
+                    <span>🤍</span>
+                    <small>Grateful</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT SCREEN -->
+        <section id="resultScreen" class="screen hidden">
+
+            <button id="backBtn" class="back-btn">
+                ← Change Mood
+            </button>
+
+            <div id="moodTitle" class="mood-title"></div>
+
+
+            <!-- QURAN CARD -->
+            <div class="card quran-card">
+
+                <div class="card-heading">
+                    📖
+                    <span>A Reminder for Your Heart</span>
+                </div>
+
+                <p id="arabicText" class="arabic"></p>
+
+                <p id="translation" class="translation"></p>
+
+                <p id="reference" class="reference"></p>
+
+            </div>
+
+
+            <!-- DUA CARD -->
+            <div class="card dua-card">
+
+                <div class="card-heading">
+                    🤲
+                    <span>A Dua for You</span>
+                </div>
+
+                <p id="duaArabic" class="dua-arabic"></p>
+
+                <p id="duaTranslation" class="dua-translation"></p>
+
+                <p id="duaReference" class="dua-reference"></p>
+
+            </div>
+
+
+            <!-- QUOTE CARD -->
+            <div class="card">
+
+                <div class="card-heading">
+                    💭
+                    <span>A Thought for You</span>
+                </div>
+
+                <p id="quote" class="quote"></p>
+
+            </div>
+
+
+            <!-- ACTIVITY CARD -->
+            <div class="card activity-card">
+
+                <div class="card-heading">
+                    🌱
+                    <span>Try This Now</span>
+                </div>
+
+                <p id="activity" class="activity"></p>
+
+            </div>
+
+
+            <button id="anotherBtn" class="another-btn">
+                ✨ Another Reminder
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

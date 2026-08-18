@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(circle at top, #315d58, transparent 40%),
+        linear-gradient(135deg, #071c1b, #123b37, #081c1b);
+
+    color: #f4f1df;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+.app {
+    width: 100%;
+    max-width: 750px;
+}
+
+.screen {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#homeScreen {
+    text-align: center;
+
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(218, 190, 105, 0.15);
+
+    color: #e7cf7b;
+
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 55px;
+
+    letter-spacing: 2px;
+
+    color: #e7cf7b;
+}
+
+.tagline {
+    font-size: 18px;
+
+    margin-top: 5px;
+
+    color: #c8d7d1;
+}
+
+.intro {
+    margin-top: 45px;
+    margin-bottom: 25px;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   MOOD BUTTONS
+========================= */
+
+.mood-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.mood-btn {
+    min-height: 120px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mood-btn span {
+    display: block;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.mood-btn small {
+    font-size: 15px;
+}
+
+.mood-btn:hover {
+    transform: translateY(-6px);
+
+    background: rgba(231, 207, 123, 0.15);
+
+    border-color: #e7cf7b;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+#resultScreen {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.back-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #cbdad5;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    color: #e7cf7b;
+}
+
+.mood-title {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+    color: #e7cf7b;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    padding: 28px;
+
+    margin-bottom: 18px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.quran-card {
+    border-top: 3px solid #e7cf7b;
+}
+
+.card-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 18px;
+
+    color: #e7cf7b;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   QURAN
+========================= */
+
+.arabic {
+    direction: rtl;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    line-height: 2;
+
+    margin-bottom: 22px;
+
+    color: #fff8dd;
+}
+
+.translation {
+    text-align: center;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #e1ebe7;
+}
+
+.reference {
+    text-align: center;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    color: #e7cf7b;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    color: #e4ece8;
+}
+
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.activity {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.another-btn {
+    display: block;
+
+    margin: 28px auto 0;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e7cf7b;
+
+    color: #102522;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.another-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(231, 207, 123, 0.2);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #9db3ad;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    #homeScreen {
+        padding: 35px 18px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .arabic {
+        font-size: 23px;
+    }
+
+    .translation {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+}
+/* =========================
+   DUA
+========================= */
+
+.dua-card {
+    border-top: 3px solid #c9b66d;
+}
+
+.dua-arabic {
+    direction: rtl;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+
+    color: #fff8dd;
+}
+
+.dua-translation {
+    text-align: center;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #e1ebe7;
+}
+
+.dua-reference {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #e7cf7b;
+}
